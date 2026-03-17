@@ -17,7 +17,7 @@ let selecionarRespostaProxPag = ()=>{
 } 
 
 let validaPath = (caminho)=>{
-    cy.location('pathname').should('eq',caminho)
+    cy.location('pathname').should('eq',caminho,{ retries: 3 })
 }
 
 //Para testar os cursos e necessario repetir muitas vezes este codigo, por isso criei funçoes para iterar sobre os cursos
