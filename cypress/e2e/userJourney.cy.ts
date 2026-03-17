@@ -8,9 +8,11 @@ import { forEach } from "lodash"
 
 let selecionarRespostaProxPag = ()=>{
     cy.get('[data-test=challenge-answer-0]')
-        .click()
+    .should('exist')
+    .click()
 
     cy.get('[data-test=next-lesson-button]')
+    .should('exist')
     .click()
 } 
 
@@ -50,6 +52,7 @@ describe('User journey',()=>{
             validaPath('/testing-your-first-application')
     
             cy.get('[data-test=next-lesson-button]')
+            .should('exist')
             .click()
     
             testaCurso(['/testing-your-first-application/app-install-and-overview',
@@ -74,6 +77,7 @@ describe('User journey',()=>{
             
 
             cy.get('[data-test=next-lesson-button]')
+            .should('exist')
             .click()
 
             testaCurso(['/testing-foundations/testing-is-a-mindset',
@@ -96,6 +100,7 @@ describe('User journey',()=>{
             validaPath('/cypress-fundamentals')
 
             cy.get('[data-test=next-lesson-button]')
+            .should('exist')
             .click()
 
             testaCurso(['/cypress-fundamentals/how-to-write-a-test',
