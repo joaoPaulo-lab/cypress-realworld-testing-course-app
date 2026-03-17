@@ -17,7 +17,7 @@ let selecionarRespostaProxPag = ()=>{
 } 
 
 let validaPath = (caminho)=>{
-    cy.location('pathname').should('eq',caminho,{ timeout: 10000 })
+    cy.location('pathname').should('eq',caminho)
 }
 
 //Para testar os cursos e necessario repetir muitas vezes este codigo, por isso criei funçoes para iterar sobre os cursos
@@ -48,7 +48,7 @@ describe('User journey',()=>{
             .eq(3)
             .click()
             //valida url
-    
+            cy.log('Here!!')
             validaPath('/testing-your-first-application')
     
             cy.get('[data-test=next-lesson-button]')
