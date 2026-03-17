@@ -34,6 +34,7 @@ describe('User journey',()=>{
         cy.visit('http://localhost:3000')
         cy.get("#__next").should("be.visible")
     })
+    
     context('courses',()=>{
 
         it('Journey course 0',()=>{
